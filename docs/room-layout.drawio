@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="room-v3" name="Room layout">
+    <mxGraphModel dx="1200" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="WiFi Sense — room layout (~20 m², top-down view)" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="110" y="30" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="wedge" value="" style="triangle;whiteSpace=wrap;html=1;fillColor=#3399FF;opacity=25;strokeColor=none" vertex="1" parent="1">
+          <mxGeometry x="205" y="130" width="540" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="wedgelabel" value="radar coverage (~120°, up to 6 m)" style="text;html=1;fontSize=11;align=center;fontColor=#FFFFFF" vertex="1" parent="1">
+          <mxGeometry x="430" y="200" width="240" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="room" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=3" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="640" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="roomlabel" value="ROOM" style="text;html=1;fontSize=13;fontStyle=1;align=left" vertex="1" parent="1">
+          <mxGeometry x="330" y="600" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dimw" value="≈ 5 m" style="text;html=1;fontSize=10;align=center" vertex="1" parent="1">
+          <mxGeometry x="240" y="94" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dimh" value="≈ 4 m" style="text;html=1;fontSize=10;align=center;horizontal=0" vertex="1" parent="1">
+          <mxGeometry x="86" y="350" width="20" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="window" value="Window" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;fillColor=#99CCFF;opacity=70" vertex="1" parent="1">
+          <mxGeometry x="440" y="112" width="320" height="16" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bed" value="Bed" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;verticalAlign=top;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="645" y="132" width="110" height="250" as="geometry" />
+        </mxCell>
+
+        <mxCell id="table" value="Table / desk" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="604" y="558" width="152" height="78" as="geometry" />
+        </mxCell>
+
+        <mxCell id="door" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CC9966;strokeColor=#996633" vertex="1" parent="1">
+          <mxGeometry x="492" y="632" width="100" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="doorlabel" value="Door" style="text;html=1;fontSize=11;align=center" vertex="1" parent="1">
+          <mxGeometry x="492" y="650" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="doorzone" value="door zone&#10;(software presence-hold:&#10;target lost HERE = left the room,&#10;lost anywhere else = sat still)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;dashed=1;fillColor=none;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="450" y="520" width="145" height="112" as="geometry" />
+        </mxCell>
+
+        <mxCell id="node" value="SENSOR NODE&#10;ESP32 + LD2450 + AM312&#10;mounted 1.4–2 m high" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="124" y="346" width="175" height="68" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pc" value="PC&#10;Python server + dashboard&#10;(Raspberry Pi takes over later)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="132" y="540" width="170" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="csitx" value="ESP32 — CSI TX&#10;(USB charger)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="500" y="140" width="125" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="csirx" value="ESP32 — CSI RX&#10;(USB serial → PC)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="205" y="450" width="130" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="csilink" value="WiFi sensing packets, 100×/s&#10;(people walking through this path are what we measure)" style="edgeStyle=none;rounded=0;html=1;strokeWidth=2;dashed=1;strokeColor=#00CC66;fontSize=10;fontColor=#00CC66" edge="1" parent="1" source="csitx" target="csirx">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="csiusb" value="USB serial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="csirx" target="pc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nodelink" value="WiFi (sensor data)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.15;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="node" target="pc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="router" value="Apartment WiFi&#10;(internet only)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="140" y="700" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="phone" value="Phone — dashboard&#10;(installable web app)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="370" y="700" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pclink" value="WiFi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="pc" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="phonelink" value="Tailscale VPN&#10;(remote view)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;dashed=1;strokeColor=#9966FF;fontSize=10;fontColor=#9966FF;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="pc" target="phone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend" value="Legend&#10;dashed line = wireless    ·    solid line = cable&#10;blue wedge = radar coverage from the sensor node&#10;&#10;Placement reasoning&#10;• Node mounted mid-wall, not in a corner: a corner-to-corner&#10;   diagonal in this room is ~6.4 m, past the LD2450's 6 m range.&#10;   From the middle of the wall the farthest corner is ~5.4 m.&#10;• The node must see the door, so the software can tell&#10;   &quot;left the room&quot; from &quot;sat still&quot;.&#10;• CSI transmitter and receiver sit on opposite sides so their&#10;   signal path crosses the room where people actually walk." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=8" vertex="1" parent="1">
+          <mxGeometry x="860" y="380" width="340" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="todo" value="To confirm on site&#10;• Which walls are shared with neighbours? The radar sees&#10;   through drywall, so its range must be limited on those sides.&#10;• Real room dimensions and furniture positions.&#10;• Whether the curtain hangs inside the radar's view (false motion)." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=8;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="860" y="620" width="340" height="120" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

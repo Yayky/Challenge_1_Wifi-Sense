@@ -1,0 +1,154 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="wiring-v2" name="Sensor node wiring">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="WiFi Sense — sensor node wiring  (v1 = LD2450 + AM312 · LD2412 dashed = later upgrade)" style="text;html=1;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="esp" value="ESP32 NodeMCU — sensor node" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=13;fontStyle=1;spacingTop=8" vertex="1" parent="1">
+          <mxGeometry x="480" y="120" width="240" height="470" as="geometry" />
+        </mxCell>
+
+        <mxCell id="esp_vin" value="VIN (5V)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="460" y="180" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_gndl" value="GND" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="460" y="220" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_g16" value="GPIO 16 (RX2)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="460" y="260" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_g17" value="GPIO 17 (TX2)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="460" y="300" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_g32" value="GPIO 32" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="490" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_g33" value="GPIO 33" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="460" y="530" width="90" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="esp_3v3" value="3V3" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="650" y="180" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_g27" value="GPIO 27" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="90" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="esp_gndr" value="GND" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="650" y="260" width="90" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ld2450" value="HLK-LD2450&#10;position radar&#10;(UART 256000 baud)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=12;fontStyle=1;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ld45_5v" value="5V" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld45_gnd" value="GND" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld45_tx" value="TX" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="240" y="260" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld45_rx" value="RX" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="240" y="300" width="60" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="am312" value="AM312&#10;PIR motion sensor" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=12;fontStyle=1;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="900" y="140" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="am_vcc" value="VCC" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="880" y="180" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="am_out" value="OUT" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="880" y="220" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="am_gnd" value="GND" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="880" y="260" width="60" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ld2412" value="HLK-LD2412 — later upgrade&#10;static-presence radar&#10;(UART 115200 baud)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=12;fontStyle=1;dashed=1;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="80" y="410" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="ld12_vcc" value="VCC (5V)" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="450" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld12_gnd" value="GND" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="490" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld12_tx" value="TX" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="530" width="60" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ld12_rx" value="RX" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="570" width="60" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w1" value="5 V" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#FF3333;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld45_5v" target="esp_vin">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w2" value="GND" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#888888;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld45_gnd" target="esp_gndl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w3" value="radar TX → ESP32 RX" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#00CC66;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld45_tx" target="esp_g16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w4" value="radar RX ← ESP32 TX" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#3399FF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld45_rx" target="esp_g17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w5" value="3.3 V" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#FF9900;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="esp_3v3" target="am_vcc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w6" value="motion on / off" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#00CC66;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="am_out" target="esp_g27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w7" value="GND" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#888888;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="am_gnd" target="esp_gndr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w8" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#FF3333;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld12_vcc" target="esp_vin">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="461" />
+              <mxPoint x="400" y="191" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w9" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#888888;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld12_gnd" target="esp_gndl">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="501" />
+              <mxPoint x="380" y="231" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w10" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#00CC66;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld12_tx" target="esp_g32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w11" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#3399FF;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="ld12_rx" target="esp_g33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usb" value="micro-USB → 5 V charger&#10;(powers the whole node · also used for flashing)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="480" y="650" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wusb" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="usb" target="esp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend" value="Legend&#10;red = 5 V  ·  orange = 3.3 V  ·  grey = ground (GND)&#10;green = data into the ESP32  ·  blue = data out of the ESP32&#10;dashed = later upgrade (LD2412)&#10;Wires that cross without a junction dot are NOT connected." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=8" vertex="1" parent="1">
+          <mxGeometry x="800" y="380" width="440" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes" value="Notes&#10;• TX always goes to RX (crossed) — the most common wiring mistake.&#10;• The radars are powered from 5 V but their data pins use 3.3 V logic, the same as the ESP32,&#10;   so they connect directly: no level shifter needed.&#10;• In the real build the power connections are made through the breadboard's + and − rails&#10;   rather than stacking several wires on one ESP32 pin — see the breadboard diagram.&#10;• The AM312 runs from 3.3 V; its OUT pin is simply high while it sees motion.&#10;• The two radars need separate UARTs because they run at different speeds (256000 vs 115200 baud)." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=8" vertex="1" parent="1">
+          <mxGeometry x="800" y="510" width="440" height="200" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

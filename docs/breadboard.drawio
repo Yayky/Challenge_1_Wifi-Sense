@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="bb-v2" name="Breadboard layout">
+    <mxGraphModel dx="1300" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="WiFi Sense — physical build: what sits on the breadboard, and what does not" style="text;html=1;fontSize=17;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bbtitle" value="830-point breadboard — the sensor node" style="text;html=1;fontSize=13;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="500" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bb" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=2" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="860" height="300" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rail5v" value="+   5 V rail   ← fed by one wire from ESP32 VIN" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCCC;strokeColor=#FF3333;fontSize=11;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="118" width="820" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="railgnd1" value="−   GND rail   ← fed by one wire from ESP32 GND" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#3399FF;fontSize=11;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="146" width="820" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rowsA" value="rows  a b c d e" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CCCCCC;fontSize=10;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="820" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="channel" value="centre channel" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#CCCCCC;fontSize=10;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="222" width="820" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="rowsB" value="rows  f g h i j" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CCCCCC;fontSize=10;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="242" width="820" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rail3v3" value="+   3.3 V rail   ← fed by one wire from ESP32 3V3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#FF9900;fontSize=11;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="300" width="820" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="railgnd2" value="−   GND rail (lower)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#3399FF;fontSize=11;align=left;spacingLeft=10;fontColor=#000000" vertex="1" parent="1">
+          <mxGeometry x="60" y="328" width="820" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="esp" value="ESP32 NodeMCU&#10;straddles the centre channel&#10;(≈ columns 20–37)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#4D4D4D;fontColor=#FFFFFF;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="184" width="230" height="98" as="geometry" />
+        </mxCell>
+
+        <mxCell id="gndjumper" value="one jumper links&#10;the two GND rails&#10;(separate strips!)" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=3;strokeColor=#3399FF;fontSize=10;fontColor=#3399FF;endArrow=none;exitX=0.02;exitY=1;exitDx=0;exitDy=0;entryX=0.02;entryY=0;entryDx=0;entryDy=0" edge="1" parent="1" source="railgnd1" target="railgnd2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="48" y="200" />
+              <mxPoint x="50" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="usb" value="micro-USB → 5 V charger&#10;powers the node · also used for flashing" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="960" y="184" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="usbedge" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0" edge="1" parent="1" source="usb" target="esp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ld2450" value="HLK-LD2450 — position radar&#10;&#10;wall-mounted, facing the room:&#10;connected with female–male jumper&#10;wires, does not sit on the board" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="am312" value="AM312 — PIR motion&#10;&#10;plugs straight into rows f–h;&#10;its dome must poke out&#10;of the enclosure" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;spacingTop=6" vertex="1" parent="1">
+          <mxGeometry x="360" y="470" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ld2412" value="HLK-LD2412 — later upgrade&#10;&#10;static-presence radar;&#10;same wiring pattern,&#10;different GPIOs" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;fontStyle=1;verticalAlign=top;spacingTop=6;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="470" width="200" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="5 V + GND&#10;from the rails" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#FF3333;fontSize=10;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.05;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="ld2450" target="bb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="data → GPIO 16 / 17" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#00CC66;fontSize=10;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="ld2450" target="esp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="3.3 V + GND,&#10;OUT → GPIO 27" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#FF9900;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="am312" target="esp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="5 V + GND,&#10;data → GPIO 32 / 33" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;strokeColor=#00CC66;dashed=1;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.95;entryY=1;entryDx=0;entryDy=0" edge="1" parent="1" source="ld2412" target="bb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tabletitle" value="Pin map" style="text;html=1;fontSize=13;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="300" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pinmap" value="&lt;table width=&quot;100%&quot; cellpadding=&quot;4&quot; cellspacing=&quot;0&quot;&gt;&lt;tr&gt;&lt;th align=&quot;left&quot;&gt;Module&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Pin&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Goes to&lt;/th&gt;&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2450&lt;/td&gt;&lt;td&gt;5V&lt;/td&gt;&lt;td&gt;5 V rail&lt;/td&gt;&lt;td&gt;~200 mA peaks&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2450&lt;/td&gt;&lt;td&gt;GND&lt;/td&gt;&lt;td&gt;GND rail&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2450&lt;/td&gt;&lt;td&gt;TX&lt;/td&gt;&lt;td&gt;GPIO 16&lt;/td&gt;&lt;td&gt;256000 baud&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2450&lt;/td&gt;&lt;td&gt;RX&lt;/td&gt;&lt;td&gt;GPIO 17&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AM312&lt;/td&gt;&lt;td&gt;VCC&lt;/td&gt;&lt;td&gt;3.3 V rail&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AM312&lt;/td&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;GPIO 27&lt;/td&gt;&lt;td&gt;high while motion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AM312&lt;/td&gt;&lt;td&gt;GND&lt;/td&gt;&lt;td&gt;GND rail&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2412&lt;/td&gt;&lt;td&gt;VCC&lt;/td&gt;&lt;td&gt;5 V rail&lt;/td&gt;&lt;td&gt;later upgrade&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2412&lt;/td&gt;&lt;td&gt;GND&lt;/td&gt;&lt;td&gt;GND rail&lt;/td&gt;&lt;td&gt;later upgrade&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2412&lt;/td&gt;&lt;td&gt;TX&lt;/td&gt;&lt;td&gt;GPIO 32&lt;/td&gt;&lt;td&gt;115200 baud&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LD2412&lt;/td&gt;&lt;td&gt;RX&lt;/td&gt;&lt;td&gt;GPIO 33&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ESP32&lt;/td&gt;&lt;td&gt;VIN&lt;/td&gt;&lt;td&gt;5 V rail&lt;/td&gt;&lt;td&gt;feeds the rail&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ESP32&lt;/td&gt;&lt;td&gt;3V3&lt;/td&gt;&lt;td&gt;3.3 V rail&lt;/td&gt;&lt;td&gt;feeds the rail&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ESP32&lt;/td&gt;&lt;td&gt;GND&lt;/td&gt;&lt;td&gt;GND rail&lt;/td&gt;&lt;td&gt;feeds the rail&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=6" vertex="1" parent="1">
+          <mxGeometry x="40" y="670" width="600" height="330" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes" value="Notes&#10;• Breadboard rails run the length of the board. Every module takes its power from a rail,&#10;   never by stacking several wires onto one ESP32 pin.&#10;• The upper and lower GND rails are separate strips — link them with one jumper,&#10;   or everything on the lower half has no ground. Classic first-build bug.&#10;• A NodeMCU is about as wide as the centre channel: expect one free hole per side,&#10;   sometimes none. That is exactly why the rails matter.&#10;• The radars must face the room, so they hang off jumper wires rather than sitting&#10;   on the board. The breadboard is a power-and-connection hub, not where sensors live.&#10;• TX always goes to RX (crossed). Radar data pins are 3.3 V logic, so no level shifter&#10;   is needed even though the modules are powered from 5 V." style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontSize=11;spacing=8" vertex="1" parent="1">
+          <mxGeometry x="670" y="670" width="620" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="offtitle" value="Not on the breadboard — no wiring needed" style="text;html=1;fontSize=13;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="960" y="290" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="offbox" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="960" y="320" width="380" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="csitx" value="ESP32 #2 — CSI transmitter&#10;bare board, USB charger only. Its antenna is the sensor." style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="980" y="336" width="340" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="csirx" value="ESP32 #3 — CSI receiver&#10;bare board, USB cable to the PC carries the measurements." style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="980" y="398" width="340" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="pi" value="Raspberry Pi Zero (later)&#10;a computer, not a circuit part. Takes over from the PC as&#10;the 24/7 host; reached over the network." style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;verticalAlign=top;spacingTop=4" vertex="1" parent="1">
+          <mxGeometry x="980" y="460" width="340" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="pc" value="PC — Python server + dashboard" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="980" y="534" width="340" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="spares" value="Spares (kept unused): LD2450 #2 — insurance against a dead&#10;module, later a second-viewing-angle experiment · AM312 #2" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;verticalAlign=top;spacingTop=4;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="980" y="578" width="340" height="48" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
