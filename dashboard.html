@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wifi Sense</title>
+</head>
+<body>
+    <h1>Wifi Sense</h1>
+    <p>Room state: <span id="state">unknown</span></p>
+    <canvas id="radar" width="500" height="400"></canvas>
+    <p>Position: <span id="posx">0</span>,<span id="posy">0</span></p>
+    <p>Status: <span id="status">connecting...</span></p>
+
+    <script>
+        // Const's for WebSocket connection and canvas setup
+        const ws = new WebSocket("ws://localhost:8000/ws");
+        const canvas = document.getElementById("radar");
+        const ctx = canvas.getContext("2d");
+        const SCALE= 100;
+        const statusEL = document.getElementById("status");
+        const posxEL = document.getElementById("posx");
+        const posyEL = document.getElementById("posy");
+        const stateEL = document.getElementById("state");
+
+        // Function to draw the radar and people on the canvas
+        function draw(people){
+            const count = people.length;
+            if (count ===0){
+                stateEL.textContent = "empty";
+            } else if (count ===1){
+                stateEL.textContent = "1 person";
+            } else {
+                stateEL.textContent = `${count} people`;
+            }
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            //DOOR SECTION ENTRY/EXIT
+            ctx.fillStyle = "rgba(29,107,95,0.15)";
+            ctx.fillRect(3*SCALE,3.4*SCALE,1*SCALE,0.6*SCALE);
+            ctx.fillStyle = "#c0392b";
+            ctx.strokeStyle = "#ddd";
+            ctx.lineWidth = 1;
+            // WINDOW SECTION ENTRY/EXIT
+            ctx.fillStyle = "rgba(29,107,95,0.15)";
+            ctx.fillRect(0.6*SCALE,0*SCALE,0.8*SCALE,0.6*SCALE);
+            ctx.fillStyle = "#c0392b";
+            ctx.strokeStyle = "#ddd";
+            ctx.lineWidth = 1;
+            // GRID LINES
+            for (let m=1; m<5;m++){
+                ctx.beginPath();
+                ctx.moveTo(m*SCALE,0);
+                ctx.lineTo(m*SCALE,canvas.height);
+                ctx.stroke();
+            };
+            for (let m=1; m<4;m++){
+                ctx.beginPath();
+                ctx.moveTo(0,m*SCALE);
+                ctx.lineTo(canvas.width,m*SCALE);
+                ctx.stroke();
+            };
+            // BORDER
+            ctx.strokeStyle = "#333";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(0,0,canvas.width,canvas.height);
+            // DRAW PEOPLE
+            for (const person of people){
+                if (person.held){
+                ctx.fillStyle = "#e1a53a";
+                } else {
+                    ctx.fillStyle = "#c0392b";
+                }
+                // Draw a circle for each person
+                ctx.beginPath();
+                ctx.arc(person.x*SCALE, person.y*SCALE, 5, 0, 2*Math.PI);
+                if (person.held){
+                    ctx.font = "12px sans-serif";
+                    ctx.fillText(`still ${person.held_seconds} seconds`, person.x*SCALE +12, person.y*SCALE +4);
+                }
+                ctx.fill();
+            }
+
+        }
+        // WebSocket event handlers
+        ws.onopen = () => {
+            statusEL.textContent = "live";
+        };
+        // Handle incoming messages from the WebSocket
+        ws.onmessage  = (event) => {
+            const frame = JSON.parse(event.data);
+            console.log(frame);
+            if (frame.people.length > 0){
+            posxEL.textContent = frame.people[0].x;
+            posyEL.textContent = frame.people[0].y;
+            };
+            draw(frame.people);
+        };
+        // Handle WebSocket closure
+        ws.onclose =() => {
+            statusEL.textContent = "disconnected";
+        };
+    </script>
+</body>
+</html>
