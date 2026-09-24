@@ -25,6 +25,10 @@ class Simulator:
         # If it's time for the person to sit, reset the sitting frames and countdown
             if self.frames_until_sit <= 0:
                 self.sit_frames_left = 50
-                self.frames_until_sit = 100
+                self.frames_until_sit = 10
         # Create a list of people with their current position and held status
-            return[{"x":round(self.x, 2),"y":round(self.y,2)}]
+            # single person sim
+            #return[{"x":round(self.x, 2),"y":round(self.y,2)}]
+            
+            # for multiple people sim 
+            return[{"x": round(self.x, 2), "y": round(self.y, 2)}, {"x": round(5 - self.x, 2), "y": round(4 - self.y, 2)}]

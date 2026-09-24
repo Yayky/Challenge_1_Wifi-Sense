@@ -1,0 +1,2523 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "3aa4f1a0-e463-436a-89ab-8f8120672eac")
+	(paper "A4")
+	(lib_symbols
+		(symbol "My_Sensor_Modules_For_Wifi_ESP:AM312"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -6.35 9.906 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AM312_0_1"
+				(rectangle
+					(start -12.7 12.7)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AM312_1_1"
+				(pin input line
+					(at -10.16 -3.81 90)
+					(length 6.4516)
+					(name "Vin"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -6.35 -3.81 90)
+					(length 6.4516)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 -3.81 90)
+					(length 6.4516)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "My_Sensor_Modules_For_Wifi_ESP:BreadBoard"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "BreadBoard_0_1"
+				(rectangle
+					(start 38.1 -13.97)
+					(end -38.1 12.7)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BreadBoard_1_1"
+				(pin power_in line
+					(at -38.1 11.43 0)
+					(length 76.2)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -38.1 8.89 0)
+					(length 76.2)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -38.1 -10.16 0)
+					(length 76.2)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -38.1 -12.7 0)
+					(length 76.2)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "My_Sensor_Modules_For_Wifi_ESP:ESP32_CP2102_28PIN"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ESP32_CP2102_28PIN_0_1"
+				(rectangle
+					(start -12.7 25.4)
+					(end 12.7 -25.4)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -2.54 -24.13)
+					(end 2.54 -27.94)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "ESP32_CP2102_28PIN_1_1"
+				(text "USB-C"
+					(at 0 -26.67 0)
+					(effects
+						(font
+							(size 0.762 0.762)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 21.59 0)
+					(length 0.0254)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 19.05 0)
+					(length 0.0254)
+					(name "GPIO36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 16.51 0)
+					(length 0.0254)
+					(name "GPIO39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 13.97 0)
+					(length 0.0254)
+					(name "GPIO34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 11.43 0)
+					(length 0.0254)
+					(name "GPIO35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 8.89 0)
+					(length 0.0254)
+					(name "GPIO32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 6.35 0)
+					(length 0.0254)
+					(name "GPIO33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 3.81 0)
+					(length 0.0254)
+					(name "GPIO25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 1.27 0)
+					(length 0.0254)
+					(name "GPIO26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -1.27 0)
+					(length 0.0254)
+					(name "GPIO27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -3.81 0)
+					(length 0.0254)
+					(name "GPIO14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -6.35 0)
+					(length 0.0254)
+					(name "GPIO12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -8.89 0)
+					(length 0.0254)
+					(name "GPIO13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -11.43 0)
+					(length 0.0254)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -11.43 -13.97 0)
+					(length 0.0254)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 21.59 180)
+					(length 0.0254)
+					(name "GPIO23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 19.05 180)
+					(length 0.0254)
+					(name "GPIO22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 16.51 180)
+					(length 0.0254)
+					(name "GPIO01"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 13.97 180)
+					(length 0.0254)
+					(name "GPIO03"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 11.43 180)
+					(length 0.0254)
+					(name "GPIO21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 8.89 180)
+					(length 0.0254)
+					(name "GPIO19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 6.35 180)
+					(length 0.0254)
+					(name "GPIO18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 3.81 180)
+					(length 0.0254)
+					(name "GPI05"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 1.27 180)
+					(length 0.0254)
+					(name "GPIO17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -1.27 180)
+					(length 0.0254)
+					(name "GPIO16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -3.81 180)
+					(length 0.0254)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -6.35 180)
+					(length 0.0254)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -8.89 180)
+					(length 0.0254)
+					(name "GPIO15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -11.43 180)
+					(length 0.0254)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 11.43 -13.97 180)
+					(length 0.0254)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "My_Sensor_Modules_For_Wifi_ESP:HLK-LD2412"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -6.35 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HLK-LD2412_0_1"
+				(rectangle
+					(start -12.7 25.4)
+					(end 0.254 -12.954)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "HLK-LD2412_1_1"
+				(pin input line
+					(at -10.16 21.59 90)
+					(length 0.0254)
+					(name "TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -10.16 90)
+					(length 0.0254)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 21.59 90)
+					(length 0.0254)
+					(name "RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -6.35 -10.16 90)
+					(length 0.0254)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 21.59 90)
+					(length 0.0254)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -10.16 90)
+					(length 0.0254)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 21.59 90)
+					(length 0.0254)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "My_Sensor_Modules_For_Wifi_ESP:HLK-LD2450"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -7.62 6.604 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "HLK-LD2450_0_1"
+				(rectangle
+					(start -17.78 25.4)
+					(end 0 -12.7)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "HLK-LD2450_1_1"
+				(pin input line
+					(at -13.97 22.86 90)
+					(length 0.0254)
+					(name "RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -13.97 17.78 270)
+					(length 0.0254)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -10.16 90)
+					(length 0.508)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 22.86 90)
+					(length 0.0254)
+					(name "TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 17.78 270)
+					(length 0.0254)
+					(name "3.3V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -10.16 90)
+					(length 0.508)
+					(name "TX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -10.16 90)
+					(length 0.508)
+					(name "RX"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -6.35 22.86 90)
+					(length 0.0254)
+					(name "DP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -6.35 17.78 270)
+					(length 0.0254)
+					(name "PA9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -10.16 90)
+					(length 0.508)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 22.86 90)
+					(length 0.0254)
+					(name "DM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -2.54 17.78 270)
+					(length 0.0254)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Breadboard\n\n"
+		(exclude_from_sim no)
+		(at 140.97 137.922 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "06a4dc04-6e61-494f-9bde-8bda4e3765c9")
+	)
+	(text "HLK-2412 (Micro-movement senors (ex. breathing))"
+		(exclude_from_sim no)
+		(at 189.738 58.928 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "52a2605c-5c4a-4ad9-b9fe-0e288eb1b398")
+	)
+	(text "HLK-LD2450 (movement sensor)"
+		(exclude_from_sim no)
+		(at 134.366 66.548 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5c7005a4-5ffb-4e70-894a-c2b1a2aabfe5")
+	)
+	(text "AM312 (Infrared sensor)"
+		(exclude_from_sim no)
+		(at 92.202 89.916 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "b34308ff-419f-43d8-af19-5451b13d2057")
+	)
+	(text "ESP32\n"
+		(exclude_from_sim no)
+		(at 231.648 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ca29bb01-abfb-407c-af15-e518057199be")
+	)
+	(wire
+		(pts
+			(xy 205.74 101.6) (xy 213.36 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fc369b9-adc5-4582-b0dc-3973917c9dd9")
+	)
+	(wire
+		(pts
+			(xy 95.25 110.49) (xy 95.25 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "161c0589-1bf2-45a9-b27d-7a6d02ec6f89")
+	)
+	(wire
+		(pts
+			(xy 113.03 85.09) (xy 113.03 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2067daaa-8b9b-4617-9406-651300a5cd9f")
+	)
+	(wire
+		(pts
+			(xy 91.44 110.49) (xy 91.44 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25b01f9f-f34e-4290-a3e7-f9b68e3a1351")
+	)
+	(wire
+		(pts
+			(xy 209.55 114.3) (xy 209.55 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "310cbffc-d8e0-4741-9d33-22a30436c3d0")
+	)
+	(wire
+		(pts
+			(xy 205.74 106.68) (xy 205.74 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "347e1030-e293-4e21-83b2-0890202b66ee")
+	)
+	(wire
+		(pts
+			(xy 213.36 116.84) (xy 195.58 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3802c816-5af6-4e81-bd1f-388c7a6274b7")
+	)
+	(wire
+		(pts
+			(xy 179.07 119.38) (xy 179.07 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d621c70-7620-42bc-8f7c-9459523d360c")
+	)
+	(wire
+		(pts
+			(xy 236.22 116.84) (xy 245.11 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f232b08-b8bd-4d29-906d-dc5a4af58015")
+	)
+	(wire
+		(pts
+			(xy 241.3 104.14) (xy 236.22 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44fe4f68-0169-4104-8349-8c4d8fb072c1")
+	)
+	(wire
+		(pts
+			(xy 209.55 106.68) (xy 213.36 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46added6-4758-4f95-bfc9-298e1fb6e0c7")
+	)
+	(wire
+		(pts
+			(xy 95.25 152.4) (xy 245.11 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48e5580c-7741-41e8-8ef7-c6c29bbb12bb")
+	)
+	(wire
+		(pts
+			(xy 87.63 153.67) (xy 240.03 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4aa8bffa-79cf-4246-98e9-622f9d14593b")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6) (xy 160.02 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4abfd40c-674b-48b3-bcb6-fc6672a209af")
+	)
+	(wire
+		(pts
+			(xy 195.58 116.84) (xy 195.58 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5177d9ff-fce9-40e8-8229-f2a20fc7fe9b")
+	)
+	(wire
+		(pts
+			(xy 170.18 73.66) (xy 170.18 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51ecd5b8-9b6d-4805-a4f3-0a12b4028609")
+	)
+	(wire
+		(pts
+			(xy 109.22 80.01) (xy 109.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55c5bb37-b852-41c0-8099-e49c55c28ad5")
+	)
+	(wire
+		(pts
+			(xy 213.36 119.38) (xy 179.07 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a302cdf-6f54-4294-b4c7-eb90a60c23e5")
+	)
+	(wire
+		(pts
+			(xy 118.11 77.47) (xy 111.76 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "678359ae-9bad-42b6-ba21-32bc079bbeff")
+	)
+	(wire
+		(pts
+			(xy 91.44 114.3) (xy 209.55 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "679d6186-af3d-438a-833f-560388b53e31")
+	)
+	(bus
+		(pts
+			(xy 105.41 124.46) (xy 181.61 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ac5c8c2-71af-44d4-a878-80d9dfc447c4")
+	)
+	(wire
+		(pts
+			(xy 161.29 99.06) (xy 161.29 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6acdf571-03ca-4ee3-ab3b-23aeef356132")
+	)
+	(wire
+		(pts
+			(xy 179.07 127) (xy 179.07 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dab4ace-5283-4244-a2a3-929383bd9785")
+	)
+	(wire
+		(pts
+			(xy 118.11 82.55) (xy 106.68 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dc5596f-9478-4eb2-ac25-4b73ce1e3d11")
+	)
+	(wire
+		(pts
+			(xy 170.18 71.12) (xy 166.37 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "782bf97b-cc37-431b-b282-aa14d96d739d")
+	)
+	(wire
+		(pts
+			(xy 109.22 106.68) (xy 205.74 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78e1a43b-958e-48e8-a0ee-76fbb32d08ab")
+	)
+	(wire
+		(pts
+			(xy 240.03 153.67) (xy 240.03 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c1428f0-8547-47ac-b4ae-07c1f8d3cba2")
+	)
+	(wire
+		(pts
+			(xy 166.37 129.54) (xy 176.53 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c870143-b46d-47fb-9a20-ead2ffd9aa7a")
+	)
+	(wire
+		(pts
+			(xy 106.68 82.55) (xy 106.68 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "825daa82-4dd2-4118-8803-03092528f123")
+	)
+	(wire
+		(pts
+			(xy 241.3 69.85) (xy 241.3 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83e42f3b-0f62-4c5e-a824-83dc074bce4d")
+	)
+	(wire
+		(pts
+			(xy 201.93 67.31) (xy 242.57 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "886d16fd-c66c-4a58-901b-c69f9e37dfd3")
+	)
+	(wire
+		(pts
+			(xy 118.11 80.01) (xy 109.22 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8923b2ea-3554-4df4-bb05-0bbbce1c2412")
+	)
+	(wire
+		(pts
+			(xy 245.11 152.4) (xy 245.11 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e05a9bd-e095-4be9-ba06-7620129df9af")
+	)
+	(wire
+		(pts
+			(xy 160.02 101.6) (xy 160.02 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "910b1578-7111-44a4-90d4-773411138c9a")
+	)
+	(wire
+		(pts
+			(xy 208.28 109.22) (xy 208.28 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "934c381a-6ad8-4ace-8254-15c493188c70")
+	)
+	(wire
+		(pts
+			(xy 242.57 106.68) (xy 236.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "972a0b9c-b633-4ab6-b1cd-a836fa2e696c")
+	)
+	(wire
+		(pts
+			(xy 176.53 119.38) (xy 176.53 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a22d4e40-83c8-4d2b-b5a6-a209215fc9bd")
+	)
+	(wire
+		(pts
+			(xy 170.18 119.38) (xy 176.53 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2e232aa-6287-4f86-a736-ebdd1f2801d0")
+	)
+	(wire
+		(pts
+			(xy 118.11 85.09) (xy 113.03 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3ab3a5e-6e4b-4367-87f4-055e110987c2")
+	)
+	(wire
+		(pts
+			(xy 106.68 109.22) (xy 208.28 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a602d01a-0760-46aa-a63d-3d72ba58de5e")
+	)
+	(wire
+		(pts
+			(xy 240.03 119.38) (xy 236.22 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad25a28d-54d4-4124-b7bd-f18ec7702bc5")
+	)
+	(bus
+		(pts
+			(xy 105.41 127) (xy 181.61 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b100f6a7-d16a-43cf-b0af-98bc6a49ab39")
+	)
+	(wire
+		(pts
+			(xy 176.53 127) (xy 176.53 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b52edd96-6fec-4ba4-9913-ca942530573b")
+	)
+	(wire
+		(pts
+			(xy 195.58 129.54) (xy 179.07 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7e61ae0-5704-4d77-8e2c-47227e758472")
+	)
+	(wire
+		(pts
+			(xy 111.76 77.47) (xy 111.76 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfd851f1-1733-4346-9bce-b7d4f11780c5")
+	)
+	(wire
+		(pts
+			(xy 208.28 104.14) (xy 213.36 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e803085f-c94c-492b-8e3c-786cbd9f4847")
+	)
+	(wire
+		(pts
+			(xy 113.03 99.06) (xy 161.29 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eed8bb91-287a-46ad-98d9-c2f447f778e9")
+	)
+	(wire
+		(pts
+			(xy 242.57 67.31) (xy 242.57 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3ad0d7b-eddf-431c-9150-68a0619fb980")
+	)
+	(wire
+		(pts
+			(xy 166.37 71.12) (xy 166.37 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4a1c877-fde0-4271-945b-31565e16175f")
+	)
+	(wire
+		(pts
+			(xy 201.93 69.85) (xy 241.3 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5acca37-f793-4a1a-b7ac-0cc5c257eb9a")
+	)
+	(wire
+		(pts
+			(xy 87.63 110.49) (xy 87.63 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7d84be-d06e-4d1f-8c33-fe65ca87302a")
+	)
+	(symbol
+		(lib_id "My_Sensor_Modules_For_Wifi_ESP:HLK-LD2450")
+		(at 128.27 90.17 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "549132bc-19df-4ada-b98d-b29ec8d4712b")
+		(property "Reference" "U4"
+			(at 134.62 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 128.27 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d0a7c9a5-afc8-4438-a3f8-a1f3153597eb")
+		)
+		(pin "1"
+			(uuid "17467283-1f99-4b41-832f-3e2ba7c9f220")
+		)
+		(pin "1"
+			(uuid "7750a689-68cc-4f0e-a04e-aa72f0e8e144")
+		)
+		(pin "1"
+			(uuid "168c56c2-97e1-4471-9cdb-c9a1882e8982")
+		)
+		(pin "1"
+			(uuid "3ce9a23a-971e-4afb-bf9f-facbfcf45f3c")
+		)
+		(pin "1"
+			(uuid "f49be7f8-f3f9-4e90-b717-eb24e43e55fe")
+		)
+		(pin "1"
+			(uuid "88c5a533-773c-40a5-807d-bec7248ed066")
+		)
+		(pin "1"
+			(uuid "97a66f24-c2f9-4d4b-b4aa-f1d9a6a07493")
+		)
+		(pin "1"
+			(uuid "2943ce19-c399-448c-bfe6-ea405f4296da")
+		)
+		(pin "1"
+			(uuid "2f085d51-bd30-482e-88d5-ff84e7ea94e2")
+		)
+		(pin "1"
+			(uuid "a6aeb7d9-cd68-44b6-a3e8-dfea5cf9a207")
+		)
+		(pin "1"
+			(uuid "a8af479e-8676-40b9-9d19-f25362f38ee0")
+		)
+		(instances
+			(project "wiring"
+				(path "/3aa4f1a0-e463-436a-89ab-8f8120672eac"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "My_Sensor_Modules_For_Wifi_ESP:BreadBoard")
+		(at 143.51 135.89 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6267386a-f91b-426e-a63f-71fa87b976e3")
+		(property "Reference" "U5"
+			(at 182.88 136.5249 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 143.51 135.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:Texas_RVA_VQFN-16-1EP_3.5x3.5mm_P0.5mm_EP2.14x2.14mm_ThermalVias"
+			(at 143.51 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 143.51 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 143.51 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "29429e0d-a97a-47ea-97ef-4144e801b665")
+		)
+		(pin ""
+			(uuid "45b4c755-c22a-4b7e-8f2a-cb5c1ab405b9")
+		)
+		(pin ""
+			(uuid "f8ef02bc-1ab3-4672-aa1f-8a70c876f326")
+		)
+		(pin ""
+			(uuid "3304df1a-666b-4766-b5dd-957e2c1a6cb7")
+		)
+		(instances
+			(project "wiring"
+				(path "/3aa4f1a0-e463-436a-89ab-8f8120672eac"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "My_Sensor_Modules_For_Wifi_ESP:HLK-LD2412")
+		(at 180.34 77.47 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d7740f1-114f-4dc3-bd1a-1885617fe6c9")
+		(property "Reference" "U3"
+			(at 207.01 71.2469 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 180.34 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 180.34 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 180.34 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1091cb0c-fdac-49f3-9027-f6cad85ce460")
+		)
+		(pin "1"
+			(uuid "c67015e3-446d-4c73-a4b4-a515ca302985")
+		)
+		(pin "1"
+			(uuid "5dfac8fc-b884-473f-b9c7-4e0b89fedb6d")
+		)
+		(pin "1"
+			(uuid "8928b81b-1a19-4850-b443-b0d65fa46abe")
+		)
+		(pin "1"
+			(uuid "8e123603-a59b-4d1a-81ac-2e4305d5a33f")
+		)
+		(pin "1"
+			(uuid "4df906e5-e51d-4d0e-a781-b2747846c0bf")
+		)
+		(pin "1"
+			(uuid "6bd0bbe3-66d6-4eb6-b112-4f782969f673")
+		)
+		(instances
+			(project "wiring"
+				(path "/3aa4f1a0-e463-436a-89ab-8f8120672eac"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "My_Sensor_Modules_For_Wifi_ESP:ESP32_CP2102_28PIN")
+		(at 224.79 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a819c246-c620-44d0-8bcc-dabbaaee84bf")
+		(property "Reference" "U2"
+			(at 224.79 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 224.79 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84faa9d4-0508-418d-af10-4ca279a85547")
+		)
+		(pin "1"
+			(uuid "f95a46e9-6edc-448e-a025-b028704d8568")
+		)
+		(pin "1"
+			(uuid "80b007db-33c1-4644-8e93-8d69ed9332db")
+		)
+		(pin "1"
+			(uuid "a82b8572-ad36-4c5e-84e5-d69ae9b7c5cb")
+		)
+		(pin "1"
+			(uuid "05857a86-c7ea-4d62-bba8-86f671964689")
+		)
+		(pin "1"
+			(uuid "89cf0030-f1b4-49b0-9e3b-e234227cba9d")
+		)
+		(pin "1"
+			(uuid "6791db3a-7b35-482c-ab6c-c8034cdf83c1")
+		)
+		(pin "1"
+			(uuid "2dea3429-dd39-4318-ab00-3eb4f4a93f36")
+		)
+		(pin "1"
+			(uuid "02e0f25c-be91-4034-aa18-89ea3d0251c9")
+		)
+		(pin "1"
+			(uuid "77c5b6cc-28bb-43c4-9122-9a99e899a5bb")
+		)
+		(pin "1"
+			(uuid "439fa7c4-bfa1-4752-8873-a1c997f90c64")
+		)
+		(pin "1"
+			(uuid "95a41c04-adc1-4bd1-8364-ef55e9ce2213")
+		)
+		(pin "1"
+			(uuid "970e380d-3108-4f94-ad7b-8dcc07409e3e")
+		)
+		(pin "1"
+			(uuid "fefeeb92-538a-4f13-9201-46c2186da0a9")
+		)
+		(pin "1"
+			(uuid "0a4a95ad-012f-4450-bd3c-48074b2c202d")
+		)
+		(pin "1"
+			(uuid "eb9b2774-679f-4274-b975-2c3879ec63c9")
+		)
+		(pin "1"
+			(uuid "eede96e6-2549-4cb0-a8ff-41a0cb9d6bb9")
+		)
+		(pin "1"
+			(uuid "0a20aa8a-5923-4210-87bb-0ac85fbac510")
+		)
+		(pin "1"
+			(uuid "882b4834-4473-4b81-a889-ee5d6e8729d8")
+		)
+		(pin "1"
+			(uuid "c399eec0-9cde-45b1-a7f0-2af5ce71901e")
+		)
+		(pin "1"
+			(uuid "7e7fb32c-da85-40f3-88f9-73efbaca7837")
+		)
+		(pin "1"
+			(uuid "32f05290-65ba-4431-86db-90ccdf82bd8e")
+		)
+		(pin "1"
+			(uuid "938eed22-1f05-4d9e-b0fe-94046ec8af38")
+		)
+		(pin "1"
+			(uuid "de587263-8022-42bd-8a57-b341951dae99")
+		)
+		(pin "1"
+			(uuid "f33c351c-3ef4-4a8d-9d31-2a110de29be0")
+		)
+		(pin "1"
+			(uuid "ec7d2127-e886-459f-aa05-53d6ea16cb84")
+		)
+		(pin "1"
+			(uuid "b1e50084-d547-4de1-95aa-9a7cc4ec73cb")
+		)
+		(pin "1"
+			(uuid "d6b610fb-de67-4265-84fd-c73a16ff72c2")
+		)
+		(pin "1"
+			(uuid "0de723a5-c3fc-4bf2-8d57-497e9adabcd7")
+		)
+		(pin "1"
+			(uuid "ac62e5e3-a3e3-4483-a4a3-926b50427217")
+		)
+		(instances
+			(project "wiring"
+				(path "/3aa4f1a0-e463-436a-89ab-8f8120672eac"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "My_Sensor_Modules_For_Wifi_ESP:AM312")
+		(at 97.79 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b46e3497-991b-42a2-8c01-0c47765f5c03")
+		(property "Reference" "U1"
+			(at 99.06 100.3299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 97.79 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 97.79 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aaa78a16-b412-4df7-bfb0-364f709aef7e")
+		)
+		(pin "1"
+			(uuid "9d84ef61-d24d-480d-882c-64b7b71d8bce")
+		)
+		(pin "1"
+			(uuid "030eaf70-f78f-4b40-b967-8bdf1718ffa2")
+		)
+		(instances
+			(project "wiring"
+				(path "/3aa4f1a0-e463-436a-89ab-8f8120672eac"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

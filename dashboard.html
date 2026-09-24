@@ -7,9 +7,11 @@
 <body>
     <h1>Wifi Sense</h1>
     <p>Room state: <span id="state">unknown</span></p>
-    <canvas id="radar" width="500" height="400"></canvas>
+    <canvas id="radar" width="549" height="400"></canvas>
     <p>Position: <span id="posx">0</span>,<span id="posy">0</span></p>
     <p>Status: <span id="status">connecting...</span></p>
+    <p>Radar: <span id="radar-status">unknown</span></p>
+    <p>Source:<span id="source">unknown</span></p>
 
     <script>
         // Const's for WebSocket connection and canvas setup
@@ -21,6 +23,8 @@
         const posxEL = document.getElementById("posx");
         const posyEL = document.getElementById("posy");
         const stateEL = document.getElementById("state");
+        const RadarEL = document.getElementById("radar-status");
+        const sourceEL = document.getElementById("source");
 
         // Function to draw the radar and people on the canvas
         function draw(people){
@@ -35,24 +39,24 @@
             ctx.clearRect(0,0,canvas.width,canvas.height);
             //DOOR SECTION ENTRY/EXIT
             ctx.fillStyle = "rgba(29,107,95,0.15)";
-            ctx.fillRect(3*SCALE,3.4*SCALE,1*SCALE,0.6*SCALE);
+            ctx.fillRect(4.80 * SCALE, 1.80 * SCALE,(5.49 - 4.80) * SCALE, (3.00 - 1.80) * SCALE);
             ctx.fillStyle = "#c0392b";
             ctx.strokeStyle = "#ddd";
             ctx.lineWidth = 1;
             // WINDOW SECTION ENTRY/EXIT
             ctx.fillStyle = "rgba(29,107,95,0.15)";
-            ctx.fillRect(0.6*SCALE,0*SCALE,0.8*SCALE,0.6*SCALE);
+            ctx.fillRect(0.00 * SCALE, 0.00 * SCALE,(0.60 - 0.00) * SCALE, (1.50 - 0.00) * SCALE);
             ctx.fillStyle = "#c0392b";
             ctx.strokeStyle = "#ddd";
             ctx.lineWidth = 1;
             // GRID LINES
-            for (let m=1; m<5;m++){
+            for (let m = 1; m * SCALE < canvas.width; m++){
                 ctx.beginPath();
                 ctx.moveTo(m*SCALE,0);
                 ctx.lineTo(m*SCALE,canvas.height);
                 ctx.stroke();
             };
-            for (let m=1; m<4;m++){
+             for (let m = 1; m * SCALE < canvas.height; m++){
                 ctx.beginPath();
                 ctx.moveTo(0,m*SCALE);
                 ctx.lineTo(canvas.width,m*SCALE);
@@ -88,11 +92,27 @@
         ws.onmessage  = (event) => {
             const frame = JSON.parse(event.data);
             console.log(frame);
+            sourceEL.textContent = frame.source;
             if (frame.people.length > 0){
             posxEL.textContent = frame.people[0].x;
             posyEL.textContent = frame.people[0].y;
             };
             draw(frame.people);
+            let radarText = "unknown";
+            if (frame.radar.connected === false) {
+                radarText = "offline";
+            } else {
+                if (frame.radar.present) {
+                    if (frame.radar.moving) {
+                        radarText = "sees someone moving";
+                    } else {
+                        radarText = `sees someone still, ${frame.radar.still_distance / 100} m`;
+                    }
+                } else {
+                    radarText = "sees no one";
+                }
+            }
+            RadarEL.textContent = radarText;
         };
         // Handle WebSocket closure
         ws.onclose =() => {

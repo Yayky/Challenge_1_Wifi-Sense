@@ -67,45 +67,28 @@ research with sources is in `ai-docs-research/COMPETITORS-*.md`.
 
 ### The WiFi-sensing part is not new either
 
-The most surprising thing I found: the WiFi-CSI sensing I planned as my
-"research layer" is **already a shipping commercial product**. Cognitive
-Systems' WiFi Motion runs in roughly a million homes through 120+ internet
-providers. Verizon sells it as "Home Awareness". Comcast bundles it free into
-"Xfinity Shield". The IEEE standardised it as 802.11bf in 2024, and WiFi chips
-now advertise built-in support for it.
+The most surprising thing I found: the WiFi-CSI sensing I planned as my "research layer" is **already a shipping commercial product**. Cognitive
+Systems' WiFi Motion runs in roughly a million homes through 120+ internet providers. Verizon sells it as "Home Awareness". 
+Comcast bundles it free into "Xfinity Shield". The IEEE standardised it as 802.11bf in 2024, and WiFi chips now advertise built-in support for it.
 
-So I am not inventing anything. I am reimplementing a productised technique on
-€10 of hardware in order to understand how it works.
+So I am not inventing anything. I am reimplementing a productised technique on €10 of hardware in order to understand how it works.
 
-Usefully, this also confirmed a design decision I had already made: all the
-commercial WiFi-sensing products detect only **coarse motion**, never precise
-positions, because the signal patterns depend heavily on each specific room.
-That is exactly why I use radar for the actual tracking and treat WiFi sensing
-as an experiment rather than the part I rely on.
+Usefully, this also confirmed a design decision I had already made: all the commercial WiFi-sensing products detect only **coarse motion**, never precise positions, because the signal patterns depend heavily on each specific room.
+That is exactly why I use radar for the actual tracking and treat WiFi sensing as an experiment rather than the part I rely on.
 
 ### So why build it?
 
-Not because the result will be better. Three honest reasons:
+Not because the result will be better. Three reasons:
 
-1. **Nothing here does exactly this combination.** Every LD2450 project I found
-   assumes Home Assistant. Mine is a standalone application I wrote myself, and
-   no existing project combines radar tracking with a WiFi-sensing experiment
-   sharing one dashboard and coordinate system. (Two hobby projects,
-   `joshuabarraza/mmwave-radar` and `PeterkoCZ91/HLK-LD2450-security`, do come
-   very close on the radar half — the second is ahead of mine, with Kalman
-   filtering.)
-2. **No subscription and no cloud.** The commercial ambient-sensing products
-   cost €20–40/month forever. There is also a concrete privacy example: in
-   August 2026 it was reported that Comcast's movement logs can be handed to
-   law enforcement without telling the subscriber, and that switching the
-   feature off does not delete logs already collected. A self-hosted system
-   reachable only through my own VPN avoids that by design, not by policy.
-3. **The point is the learning.** Buying an FP2 would give me a working sensor
-   and teach me nothing. Building this means understanding every layer, from
+1. **Nothing here does exactly this combination.** Every LD2450 project I found assumes Home Assistant. Mine is a standalone application I wrote myself, and no existing project combines radar tracking with a WiFi-sensing experiment sharing one dashboard and coordinate system.
+   (Two hobby projects, `joshuabarraza/mmwave-radar` and `PeterkoCZ91/HLK-LD2450-security`, do come very close on the radar half — the second is ahead of mine, with Kalman filtering.)
+2. **No subscription and no cloud.** The commercial ambient-sensing products cost €20–40/month forever. There is also a concrete privacy example: in
+   August 2026 it was reported that Comcast's movement logs can be handed to law enforcement without telling the subscriber, and that switching the
+   feature off does not delete logs already collected. A self-hosted system reachable only through my own VPN avoids that by design, not by policy.
+3. **The point is the learning.** Buying an FP2 would give me a working sensor and teach me nothing. Building this means understanding every layer, from
    how bytes arrive over a serial wire to how a dot gets drawn on a canvas.
 
-**Where I do not compete:** this is not a security product (no professional
-monitoring, no certified alarm response) and not a medical device (no fall
+**Where I do not compete:** this is not a security product (no professional monitoring, no certified alarm response) and not a medical device (no fall
 detection). Those are out of scope.
 
 ## Possible issues I expect (and some that only look like issues)
@@ -161,7 +144,8 @@ And questions people reasonably ask that turn out fine:
 
 - **Must have**: real radar data on the dashboard (FR1, FR2), state display (FR4).
 - **Should have**: still-person hold (FR3), out-of-room filtering (FR5), the written validation tests.
-- **Could have** (if time in the block allows): PIR cross-check, the WiFi-CSI live demo, phone notifications, 24/7 Raspberry Pi hosting, automatic arm/disarm, native app, bb or nerf gun turret in a corner that shoots the detected presence inside the room.
+- **Could have:** (if time in the block allows): PIR cross-check, the WiFi-CSI live demo, phone notifications, 24/7 Raspberry Pi hosting, automatic arm/disarm, native app, bb or nerf gun turret in a corner that shoots the detected presence inside the room.
+- **Wont have:**  cameras, access to it trough public networks.
 
 ## SWOT analysis
 
@@ -182,23 +166,6 @@ And questions people reasonably ask that turn out fine:
 | My knowledge gaps block progress                           | Medium | Medium                 | Research-first approach (documented), community guides for every component, AI assistant for reviews, teachers for feedback                              |
 | Losing work                                                | Low    | High                   | Git with pushes to GitHub after every work session                                                                                                       |
 
-## How to get it running (for someone starting from zero)
-
-Current state — software only, using the simulator (no hardware needed):
-
-1. Install Python 3.11+ and Git.
-2. `git clone` the repository, then inside it:
-   `pip install -r requirements.txt`
-3. Run `python main.py` — this starts the server in simulation mode.
-4. Open `http://localhost:8000` in a browser: you see the room map with
-   simulated people moving around. `python main.py --help` lists other modes.
-
-With hardware (once the build phase is done, full guide will follow):
-
-5. Wire the LD2450 to the ESP32 (4 wires: 5V, GND, TX, RX) as shown in the wiring diagram.
-6. Flash the ESP32 with the ESPHome configuration file from this repository (one command; ESPHome walks you through the WiFi setup).
-7. Start the server with `python main.py --mode esphome` — dots on the map are now real people.
-
 ## Expected learning outcomes
 
 By the end of this project I expect to be able to:
@@ -213,11 +180,10 @@ By the end of this project I expect to be able to:
 ## Applied areas of knowledge (Smart Home challenge topics)
 
 - **Intelligent Technologies** — combining two radar types + PIR into one reliable presence picture (sensor fusion); the WiFi-CSI sensing experiment.
-- **AI Basics** — the CSI experiment produces labelled data (radar = ground truth) that a later classification model can be trained on; the block itself uses signal processing, the step before AI.
 - **Network & Cloud Basics** — WiFi topology, UDP streaming, client isolation, VPN-based remote access.
 - **Cyber Security Principles** — privacy-by-design (no images exist), keeping the dashboard off the public internet, thinking about what an attacker learns from a presence system.
 - **Software Design & Engineering** — requirements, architecture, MoSCoW prioritisation, version control, testing and validation.
-- **Process Data in Organisations** — a live data pipeline: raw sensor frames → cleaned positions → visualisation and (later) notifications.
+- **AI Basics** — the CSI experiment produces labelled data (radar = ground truth) that a later classification model can be trained on; the block itself uses signal processing, the step before AI.
 
 ## Planning beyond the block
 

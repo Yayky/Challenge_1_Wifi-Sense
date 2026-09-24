@@ -8,3 +8,4 @@ venv/
 .DS_Store
 firmware/secrets.yaml
 learn/
+docs/cads/*.mp4

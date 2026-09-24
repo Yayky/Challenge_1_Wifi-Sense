@@ -15,17 +15,94 @@ ota:
    password: !secret ota_password
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
+  networks:
+    - ssid: !secret wifi_ssid
+      password: !secret wifi_password
+      priority: 2
+      manual_ip:
+        static_ip: 10.97.46.35
+        gateway: 10.97.46.254
+        subnet: 255.255.255.8
+    - ssid: !secret hotspot_ssid
+      password: !secret hotspot_password
+      priority: 1
 
   ap:
-    ssid: "Sensor Node Fallback Hotspot"
+    ssid: "Sensor Node Fallback"
     password: !secret fallback_password
 
 captive_portal:
 
+uart:
+  - id: uart_ld2412
+    tx_pin: GPIO17
+    rx_pin: GPIO16
+    baud_rate: 115200
+    parity: NONE
+    stop_bits: 1
+  - id: uart_ld2450
+    tx_pin: GPIO26
+    rx_pin: GPIO25
+    baud_rate: 256000
+    parity: NONE
+    stop_bits: 1
+
+ld2412:
+  uart_id: uart_ld2412
+
+ld2450:
+  id: ld2450_radar
+  uart_id: uart_ld2450
+
 binary_sensor:
+  - platform: ld2412
+    has_target:
+      name: "Presence"
+    has_moving_target:
+      name: "Moving target"
+    has_still_target:
+      name: "Still target"
   - platform: gpio
     pin: GPIO27
     name: "PIR Motion"
     device_class: motion
+
+sensor:
+  - platform: ld2412
+    moving_distance:
+      name: "Moving distance"
+    still_distance:
+      name: "Still distance"
+  - platform: ld2450
+    ld2450_id: ld2450_radar
+    target_count:
+      name: "Target count"
+    target_1:
+      x:
+        name: "T1 x"
+        filters:
+          - throttle_with_priority: 100ms
+      y:
+        name: "T1 y"
+        filters:
+          - throttle_with_priority: 100ms
+
+    target_2:
+      x:
+        name: "T2 x"
+        filters:
+          - throttle_with_priority: 100ms
+      y:
+        name: "T2 y"
+        filters:
+          - throttle_with_priority: 100ms
+          
+    target_3:
+      x:
+        name: "T3 x"
+        filters:
+          - throttle_with_priority: 100ms
+      y:
+        name: "T3 y"
+        filters:
+          - throttle_with_priority: 100ms
