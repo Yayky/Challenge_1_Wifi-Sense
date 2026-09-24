@@ -15,7 +15,7 @@
 
     <script>
         // Const's for WebSocket connection and canvas setup
-        const ws = new WebSocket("ws://localhost:8000/ws");
+        const ws = new WebSocket(`ws://${window.location.host}/ws`);
         const canvas = document.getElementById("radar");
         const ctx = canvas.getContext("2d");
         const SCALE= 100;
